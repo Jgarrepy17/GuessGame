@@ -13,23 +13,22 @@ var playAgain = "y";
 do{
 	var Answer = Math.floor(Math.random()*(99) + 1);
 	alert(Answer);
+	Turns = 0;
 	do	{
 		Guess =  prompt('Enter a guess 1-100');
-		do	{
-			Turns = (0);
-		}
 		if (Guess > Answer){
 		alert('too high');
-	}
-		else if(Guess < Answer){
-		alert('too low');
+		}
+		else if (Guess < Answer) {
+			alert('too low');
 		}
 		Turns ++;
 		alert(Turns +'Turns')
 	}
 	while (Guess != Answer);
-		alert('congratulations');
-	playAgain = prompt("Would you like to play again? (y = Yes)")
+	alert('congratulations');
+	Games++;
+	playAgain = prompt("Would you like to play game "+Games++ +"? (y = Yes)")
 }
 while (playAgain == 'y')
 /* End Playing*/
